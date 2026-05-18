@@ -18,7 +18,7 @@ Product managers, strategy leads, and business operators who regularly produce m
 BRIEF → INTELLIGENCE → ASSESSMENT → SIZING → BUSINESS CASE → RECOMMENDATION → DELIVERABLE
 ```
 
-Each stage has its own conductor rule, which is just a markdown file your agent reads to know what inputs it needs, what research to conduct, what structure to produce, and what quality bar to hit before moving forward. You can read them too.
+Each stage has its own conductor rule: a markdown file your agent executes and you can reference anytime.
 
 ### Pipeline Stages
 

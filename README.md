@@ -6,7 +6,7 @@ A structured pipeline that takes a business question from initial briefing throu
 
 If you've ever built a market assessment or a business case, you already know the pipeline: scope the problem, gather intelligence, assess the situation, size the market, build the case, make a recommendation, and deliver. The problem is that most of this work gets done in disconnected documents, scattered across teams, with no structured way to carry findings forward from one stage to the next.
 
-This framework encodes that pipeline as a set of AI conductor rules so a single operator with an AI agent can produce strategy-grade work in hours instead of weeks. The conductor stages your analysis, enforces quality gates between steps, and routes you through the right sequence based on the complexity of the ask. You focus on the domain expertise and judgment. Your agent handles the speed, recall, and structured execution.
+This framework encodes that pipeline as a set of AI conductor rules so a single operator with an AI agent can produce strategy-grade work in hours instead of weeks. The conductor stages your analysis, enforces quality gates between steps, and routes you through the right sequence based on the complexity of the ask. You focus on the domain expertise and judgment, and your agent handles the speed, recall, and structured execution.
 
 ## Who Is This For?
 
@@ -18,7 +18,7 @@ Product managers, strategy leads, and business operators who regularly produce m
 BRIEF → INTELLIGENCE → ASSESSMENT → SIZING → BUSINESS CASE → RECOMMENDATION → DELIVERABLE
 ```
 
-Each stage has its own conductor rule, which is just a markdown file your agent reads to know what inputs it needs, what research to conduct, what structure to produce, and what quality bar to hit before moving forward. You can read them too, since they double as the documentation.
+Each stage has its own conductor rule, which is just a markdown file your agent reads to know what inputs it needs, what research to conduct, what structure to produce, and what quality bar to hit before moving forward. You can read them too.
 
 ### Pipeline Stages
 
@@ -49,7 +49,7 @@ Not every question needs a full business case. You tell the conductor what you'r
 1. **Drop the conductor rules** into your AI agent workspace (Cursor rules folder, Claude Code project, or Codex instructions)
 2. **Start an analysis** by telling the agent "Use the conductor. Here's my question:" followed by the business problem you're trying to solve
 3. **Follow the pipeline** as the conductor assesses where you are and tells you what to do next
-4. **Iterate on each stage**, which produces a markdown artifact you can review and refine before moving forward
+4. **Iterate on each stage** as it produces a markdown artifact you can review and refine before moving forward
 5. **Generate deliverables** when research is complete, and the deliverable generator produces stakeholder-ready output
 
 ## What's Included
@@ -70,7 +70,7 @@ ai-strategic-analysis/
 
 ## What You'll Need to Build (Beyond This Repo)
 
-The conductor is the brain of the workflow. To make it fully operational, you'll also need:
+To make it fully operational, you'll also need:
 
 ```
 ┌────────────────────────────────────────────────────────┐

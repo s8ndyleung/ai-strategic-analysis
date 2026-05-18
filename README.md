@@ -1,16 +1,16 @@
 # AI Strategic Analysis
 
-A structured pipeline that takes a business question from brief to branded deliverable, powered by AI agents.
+A structured pipeline that takes a business question from initial briefing through research, analysis, and a stakeholder-ready deliverable. The framework is written for both humans and AI agents. It gives you the high-level structure, and you collaborate with your agent to build out the specifics tailored to your engagement.
 
 ## What Is This?
 
-Strategic analysis has always followed a pipeline: scope the problem, gather intelligence, assess the situation, size the market, build the business case, make a recommendation, and deliver. The problem is that most of this work gets done in disconnected documents, scattered across teams, with no structured way to carry findings forward from one stage to the next.
+If you've ever built a market assessment or a business case, you already know the pipeline: scope the problem, gather intelligence, assess the situation, size the market, build the case, make a recommendation, and deliver. The problem is that most of this work gets done in disconnected documents, scattered across teams, with no structured way to carry findings forward from one stage to the next.
 
-This framework encodes that pipeline as a set of AI conductor rules so a single operator with an AI agent can produce strategy-grade work in hours instead of weeks. The conductor stages your analysis, enforces quality gates between steps, and routes you through the right sequence based on the complexity of the ask. You bring the domain expertise and judgment, and the AI brings the speed, recall, and structured execution.
+This framework encodes that pipeline as a set of AI conductor rules so a single operator with an AI agent can produce strategy-grade work in hours instead of weeks. The conductor stages your analysis, enforces quality gates between steps, and routes you through the right sequence based on the complexity of the ask. You focus on the domain expertise and judgment. Your agent handles the speed, recall, and structured execution.
 
 ## Who Is This For?
 
-Product managers, strategy leads, and business operators who regularly produce market assessments, competitive analyses, or business cases and want a repeatable system for doing that work with an AI agent. Also useful for consulting teams who want to standardize how strategic analysis gets structured and delivered across engagements.
+Product managers, strategy leads, and business operators who regularly produce market assessments, competitive analyses, or business cases and want a repeatable system for doing that work with an AI agent. Teams looking to standardize how strategic analysis gets structured and delivered across engagements will also find this useful.
 
 ## The Conductor Pipeline
 
@@ -18,11 +18,7 @@ Product managers, strategy leads, and business operators who regularly produce m
 BRIEF → INTELLIGENCE → ASSESSMENT → SIZING → BUSINESS CASE → RECOMMENDATION → DELIVERABLE
 ```
 
-Each stage has a dedicated rule that tells the agent:
-- What inputs it needs
-- What research to conduct
-- What structure to produce
-- What quality bar to hit before moving forward
+Each stage has its own conductor rule, which is just a markdown file your agent reads to know what inputs it needs, what research to conduct, what structure to produce, and what quality bar to hit before moving forward. You can read them too, since they double as the documentation.
 
 ### Pipeline Stages
 
@@ -39,7 +35,7 @@ Each stage has a dedicated rule that tells the agent:
 
 ### Engagement Tiers (Scale to Complexity)
 
-Not every question needs a full business case. The conductor scales:
+Not every question needs a full business case. You tell the conductor what you're working on, and it scales accordingly:
 
 | Tier | When to Use | Stages That Fire |
 |------|-------------|------------------|
@@ -101,7 +97,7 @@ The conductor is the brain of the workflow. To make it fully operational, you'll
 | **Output Engine** | Branded deliverable generation (PPTX, DOCX, HTML) | python-pptx, python-docx, or HTML templates styled to your brand |
 | **Voice Profiles** | Consistent tone across deliverables and communications | Analyze 10+ reference documents to extract style patterns |
 
-These are all buildable with your AI agent as a partner. The conductor rules reference when skills and RAG are needed, so start with the pipeline and build supporting components as your analyses demand them. For a deeper guide on how to design the full system (memory, skills, output engine, and self-maintenance), see the [Closed-Loop Agentic OS](https://github.com/s8ndyleung/closed-loop-agentic-os) guide.
+You can build all of these with your agent as a partner. The conductor rules reference when skills and RAG come into play, so start with the pipeline and add supporting components as your analyses demand them. For a deeper guide on how to design the full system (memory, skills, output engine, and self-maintenance), see the [Closed-Loop Agentic OS](https://github.com/s8ndyleung/closed-loop-agentic-os) guide.
 
 ## Design Philosophy
 
@@ -111,6 +107,8 @@ These are all buildable with your AI agent as a partner. The conductor rules ref
 - **Model-agnostic.** Works with any frontier model (Claude, GPT, Gemini) since the conductor rules are just plain markdown.
 
 ## Example Use Cases
+
+Here are a few examples of the kinds of questions you could hand to your agent with this pipeline:
 
 - Market sizing for a new AI product category
 - Competitive landscape assessment for a strategic partnership

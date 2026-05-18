@@ -81,6 +81,8 @@ Every rule should include:
 
 Write them in plain markdown so they work with any agent (Cursor, Claude Code, Codex, Windsurf) and any model. Your agent reads the file, follows the instructions, and produces the stage output. You review, refine, and move forward.
 
+A sample is included: [`conductor/00-auto-execute.md`](conductor/00-auto-execute.md) shows how the auto-execute rule orchestrates the full pipeline end-to-end. Use it as a starting point for writing the rest.
+
 ## What You'll Need to Build (Beyond This Repo)
 
 To make it fully operational, you'll also need:

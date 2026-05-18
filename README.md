@@ -52,21 +52,34 @@ Not every question needs a full business case. You tell the conductor what you'r
 4. **Iterate on each stage** as it produces a markdown artifact you can review and refine before moving forward
 5. **Generate deliverables** when research is complete, and the deliverable generator produces stakeholder-ready output
 
-## What's Included
+## Building Your Conductor Rules
+
+Each conductor rule is a standalone markdown file your agent reads and executes. Create one per pipeline stage using this structure:
 
 ```
-ai-strategic-analysis/
-├── README.md              ← You are here
-└── conductor/
-    ├── 00-auto-execute.md
-    ├── 01-conductor.md
-    ├── 02-market-intelligence.md
-    ├── 03-situation-assessment.md
-    ├── 04-market-sizing.md
-    ├── 05-business-case.md
-    ├── 06-recommendation.md
-    └── 07-deliverable-generator.md
+conductor/
+├── 00-auto-execute.md          # Engagement setup, folder structure, brief template
+├── 01-conductor.md             # Routes to the right stage based on where you are
+├── 02-market-intelligence.md   # Landscape scan: competitors, trends, signals
+├── 03-situation-assessment.md  # Diagnostic: framed problem, strategic options
+├── 04-market-sizing.md         # TAM/SAM/SOM, revenue projections, unit economics
+├── 05-business-case.md         # Investment thesis, ROI analysis, risk assessment
+├── 06-recommendation.md        # Strategic recommendation with phased plan
+└── 07-deliverable-generator.md # Branded output (HTML, deck, memo)
 ```
+
+### What Goes in Each Conductor Rule
+
+Every rule should include:
+
+- **Role and purpose**: What the agent is doing at this stage
+- **Inputs required**: What data or prior-stage outputs it needs before starting
+- **Steps to execute**: The specific research, analysis, or synthesis workflow
+- **Output format**: What the deliverable looks like (section structure, level of detail)
+- **Quality gates**: What must be true before the agent moves to the next stage
+- **Engagement tier logic**: How the rule scales up or down based on complexity
+
+Write them in plain markdown so they work with any agent (Cursor, Claude Code, Codex, Windsurf) and any model. Your agent reads the file, follows the instructions, and produces the stage output. You review, refine, and move forward.
 
 ## What You'll Need to Build (Beyond This Repo)
 

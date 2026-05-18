@@ -4,9 +4,13 @@ A structured pipeline that takes a business question from brief to branded deliv
 
 ## What Is This?
 
-Strategic analysis follows a pipeline: scope the problem, gather intelligence, assess the situation, size the market, build the business case, make a recommendation, deliver. This framework encodes that pipeline as a set of AI conductor rules so a single operator with an AI agent can produce strategy-grade work in hours instead of weeks.
+Strategic analysis has always followed a pipeline: scope the problem, gather intelligence, assess the situation, size the market, build the business case, make a recommendation, and deliver. The problem is that most of this work gets done in disconnected documents, scattered across teams, with no structured way to carry findings forward from one stage to the next.
 
-The conductor is the core. It stages your analysis, enforces quality gates, and routes you through the right steps based on the complexity of the ask. You bring the domain expertise and judgment. The AI brings speed, recall, and structured execution.
+This framework encodes that pipeline as a set of AI conductor rules so a single operator with an AI agent can produce strategy-grade work in hours instead of weeks. The conductor stages your analysis, enforces quality gates between steps, and routes you through the right sequence based on the complexity of the ask. You bring the domain expertise and judgment, and the AI brings the speed, recall, and structured execution.
+
+## Who Is This For?
+
+Product managers, strategy leads, and business operators who regularly produce market assessments, competitive analyses, or business cases and want a repeatable system for doing that work with an AI agent. Also useful for consulting teams who want to standardize how strategic analysis gets structured and delivered across engagements.
 
 ## The Conductor Pipeline
 
@@ -55,10 +59,10 @@ Not every question needs a full business case. The conductor scales:
 ## How to Use It
 
 1. **Drop the conductor rules** into your AI agent workspace (Cursor rules folder, Claude Code project, or Codex instructions)
-2. **Start an engagement**: Tell the agent "Use the conductor. Here's my question: [describe the business problem]"
-3. **Follow the pipeline**: The conductor assesses where you are and tells you what to do next
-4. **Iterate**: Each stage produces a markdown artifact. Review it, refine it, then move to the next stage.
-5. **Generate deliverables**: When research is complete, the deliverable generator produces stakeholder-ready output
+2. **Start an analysis** by telling the agent "Use the conductor. Here's my question:" followed by the business problem you're trying to solve
+3. **Follow the pipeline** as the conductor assesses where you are and tells you what to do next
+4. **Iterate on each stage**, which produces a markdown artifact you can review and refine before moving forward
+5. **Generate deliverables** when research is complete, and the deliverable generator produces stakeholder-ready output
 
 ## What's Included
 
@@ -105,14 +109,14 @@ The conductor is the brain of the workflow. To make it fully operational, you'll
 | **Output Engine** | Branded deliverable generation (PPTX, DOCX, HTML) | python-pptx, python-docx, or HTML templates styled to your brand |
 | **Voice Profiles** | Consistent tone across deliverables and communications | Analyze 10+ reference documents to extract style patterns |
 
-These are all buildable with your AI agent as a partner. The conductor rules reference when skills and RAG are needed. Start with the pipeline, then build supporting components as your analyses demand them.
+These are all buildable with your AI agent as a partner. The conductor rules reference when skills and RAG are needed, so start with the pipeline and build supporting components as your analyses demand them. For a deeper guide on how to design the full system (memory, skills, output engine, and self-maintenance), see the [Closed-Loop Agentic OS](https://github.com/s8ndyleung/closed-loop-agentic-os) guide.
 
 ## Design Philosophy
 
-- **Pipeline over prompting.** Structure beats cleverness. A staged pipeline with quality gates produces better work than a single monolithic prompt.
-- **Domain expertise is the moat.** The AI provides speed and structure. You provide the framing, judgment, and "so what." The value comes from knowing which questions to ask, not from the raw output.
-- **Human-in-the-loop at every stage.** Review each artifact before moving forward. The conductor recommends. You decide.
-- **Model-agnostic.** Works with any frontier model (Claude, GPT, Gemini). The conductor rules are plain markdown.
+- **Pipeline over prompting.** A staged pipeline with quality gates consistently produces better work than a single monolithic prompt, no matter how clever.
+- **Domain expertise is the moat.** The AI provides speed and structure, but you provide the framing, judgment, and "so what." The value comes from knowing which questions to ask, not from the raw output.
+- **Human-in-the-loop at every stage.** Review each artifact before moving forward, because the conductor recommends but you decide.
+- **Model-agnostic.** Works with any frontier model (Claude, GPT, Gemini) since the conductor rules are just plain markdown.
 
 ## Example Use Cases
 

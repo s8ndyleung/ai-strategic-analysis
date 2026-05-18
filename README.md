@@ -15,15 +15,7 @@ Product managers, strategy leads, and business operators who regularly produce m
 ## The Conductor Pipeline
 
 ```
-┌──────────────────────────────────────────────────────────────────┐
-│                                                                  │
-│  BRIEF → INTELLIGENCE → ASSESSMENT → SIZING → BUSINESS CASE     │
-│                                                        │         │
-│                              RECOMMENDATION ←──────────┘         │
-│                                    │                             │
-│                              DELIVERABLE                         │
-│                                                                  │
-└──────────────────────────────────────────────────────────────────┘
+BRIEF → INTELLIGENCE → ASSESSMENT → SIZING → BUSINESS CASE → RECOMMENDATION → DELIVERABLE
 ```
 
 Each stage has a dedicated rule that tells the agent:
